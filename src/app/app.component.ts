@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  date: Date = new Date();
+  today() {
+    this.date = new Date();
+  }
 }
