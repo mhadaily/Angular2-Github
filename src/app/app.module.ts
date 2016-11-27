@@ -1,24 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { AlertModule, DatepickerModule } from 'ng2-bootstrap/ng2-bootstrap';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import {MaterialModule} from '@angular/material';
 
-
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import { DialogContentComponent } from './dialog-content/dialog-content.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogContentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AlertModule,
-    DatepickerModule
+    MaterialModule.forRoot()
   ],
+  entryComponents: [DialogContentComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
