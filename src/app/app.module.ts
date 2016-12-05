@@ -5,7 +5,7 @@ import {HttpModule} from '@angular/http';
 import {MaterialModule} from '@angular/material';
 
 import {AppComponent} from './app.component';
-import { DialogContentComponent } from './dialog-content/dialog-content.component';
+import {DialogContentComponent} from './dialog-content/dialog-content.component';
 
 @NgModule({
   declarations: [
@@ -22,4 +22,5 @@ import { DialogContentComponent } from './dialog-content/dialog-content.componen
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
