@@ -1,7 +1,39 @@
-<h2>Welcome</h2>
-<nav>
-  <a routerLink="/" routerLinkActive="active">Home</a>
-  <a routerLink="/material-helper" routerLinkActive="active">Material Helper</a>
-</nav>
+<md-sidenav-layout>
+  <div class="app-content">
+
+    <md-card>
+      <h2>Welcome</h2>
+      <nav>
+        <a routerLink="/" routerLinkActive="active">Home</a>
+        <a routerLink="/material-helper" routerLinkActive="active">Material Helper</a>
+      </nav>
+    </md-card>
+
+    <md-card class="app-input-section">
+      <md-input (keyup)="onSearch(nickname)" #nickname placeholder="Username" maxlength="50" class="input-full-width">
+        <md-hint align="end">
+          {{nickname.characterCount}} / 50
+        </md-hint>
+      </md-input>
+    </md-card>
+
+
+
+    <md-card class="app-input-section">
+      <md-hint align="end">
+        {{listUsernames.total_count}}
+      </md-hint>
+        <ul>
+
+          <li *ngFor="let user of listUsernames.items">
+            {{user.login}} | {{user.score}}
+          </li>
+        </ul>
+    </md-card>
+
+  </div>
+</md-sidenav-layout>
 
 <router-outlet></router-outlet>
+
+

@@ -192,5 +192,5 @@ export class MaterialhelperComponent {
   showSnackbar () {
     this._snackbar.open('YUM SNACKS', 'CHEW');
   }
-
+  
 }

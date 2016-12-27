@@ -8,6 +8,7 @@ import { routerConfig } from "./app.router";
 import { AppComponent } from './app.component';
 import { DialogContentComponent } from './materialhelper/dialog-content/dialog-content.component';
 import { MaterialhelperComponent } from './materialhelper/materialhelper.component';
+import { GithubService } from "./services/github.service";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { MaterialhelperComponent } from './materialhelper/materialhelper.compone
     MaterialModule.forRoot()
   ],
   entryComponents: [DialogContentComponent],
-  providers: [],
+  providers: [GithubService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

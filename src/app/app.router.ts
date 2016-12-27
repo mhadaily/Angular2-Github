@@ -4,7 +4,7 @@ import { MaterialhelperComponent } from "./materialhelper/materialhelper.compone
 
 const APP_ROUTE: Routes = [
   {
-    path: '',
+    path: ' ',
     component: AppComponent,
     pathMatch: 'full',
   },
